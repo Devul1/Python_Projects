@@ -30,7 +30,7 @@ class ValuesConverter:
             raise ConvertionException(f'Не удалось обработать количество {amount}')
 
         r = requests.request('GET', f'https://api.apilayer.com/fixer/convert?to=\
-{base_ticker}&from={quote_ticker}&amount={amount}', headers=headers)
+{quote_ticker}&from={base_ticker}&amount={amount}', headers=headers)
         total_base = json.loads(r.content)['result']
 
         return total_base

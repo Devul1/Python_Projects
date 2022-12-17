@@ -83,7 +83,7 @@ class Field:
                 cur = Dot(dot.x + dotx, dot.y + doty)
                 if not (self.out(cur)) and cur not in self.busy:
                     if verb:
-                        self.field[cur.x][cur.y] = "T"
+                        self.field[cur.x][cur.y] = "."
                     self.busy.append(cur)
 
     def add_ship(self, ship):
@@ -114,7 +114,7 @@ class Field:
                 else:
                     print("Корабль ранен!")
                     return True
-        self.field[dot.x][dot.y] = "T"
+        self.field[dot.x][dot.y] = "."
         print("Мимо!")
         return False
 

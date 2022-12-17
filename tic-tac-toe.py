@@ -19,7 +19,7 @@ def user_input(f):
         if not(place[0].isdigit() and place[1].isdigit()):
             print('Введите числа!')
             continue
-        y, x = map(int, place)
+        x, y = map(int, place)
         if not (x >= 0 and x < 3 and y >= 0 and y < 3):
             print('Выход из диапазона!')
             continue
